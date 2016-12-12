@@ -1,5 +1,18 @@
 #ArdBitmaplib: Compress and draw bitmaps on the Arduboy
 By @igvina
+##Features:
+###Bitmap library:
+* Works with compressed & uncompressed bitmaps.
+* Real-time image resize (downscale).
+* Horizontal/Vertical mirroring (fast).
+* Bitmap alignment.
+
+###Bitmap compressor:
+* Compatible with PC/MAC/Linux (made with Java).
+* Good compression (better than Cabi).
+* Supports PNG, GIF (also animated gifs) & JPG.
+* Autogenerate Sketchs from images or animated gifs (great for no-developers).
+
 ##Usage:
 ###Compressor (v1.0):
 * Syntax: java -jar compressor.jar image [-options]
