@@ -1,28 +1,26 @@
 #ArdBitmaplib: Compress and draw bitmaps on the Arduboy
 By @igvina
 ##Usage:
-- Compressor (v1.0):
-Syntax: java -jar compressor.jar image [-options]
+###Compressor (v1.0):
+* Syntax: java -jar compressor.jar image [-options]
+	* options:
+		* -gs SKETCH_FOLDER       Generate sketch code
+        	* -fr VALUE               Change Frame rate (only animated gifs)
+        	* -v                      View compressed image
+        	* -anp PREFIX             Array name prefix
+        	* -ver                    Show encoder version
 
-	-options:
-         	-gs SKETCH_FOLDER       Generate sketch code
-        	-fr VALUE               Change Frame rate (only animated gifs)
-        	-v                      View compressed image
-        	-anp PREFIX             Array name prefix
-        	-ver                    Show encoder version
-
-
-	-examples:
-        	java -jar compressor.jar dog.gif -gs DOG -fr 15
-        	java -jar compressor.jar dance.png -v
-
-	+Notes: 
-		- Supports JPG, PNG, GIF (also animated gifs)
-		- Max image size = 128 x 64 pixels (resized if bigger)
-		- Encoding ratio could be bigger than 1 (worse than original image) 
+	* examples:
 	
+        	"java -jar compressor.jar dog.gif -gs DOG -fr 15"
+        	"java -jar compressor.jar dance.png -v"
 
-- Library (1.0.0):
+	* Notes: 
+		* Supports JPG, PNG, GIF (also animated gifs)
+		* Max image size = 128 x 64 pixels (resized if bigger)
+		* Encoding ratio could be bigger than 1 (worse than original image) 
+	
+###Library (1.0.0):
 
 	+Copy lib ( ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
 	+Add in .ino file:
