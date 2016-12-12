@@ -33,7 +33,7 @@ By @igvina
 		* Max image size = 128 x 64 pixels (resized if bigger)
 		* Encoding ratio could be bigger than 1 (worse than original image) 
 	
-###Library (1.0.0):
+###Bitmap library (1.0.0):
 
 * Copy lib (ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
 * Add in .ino file:
