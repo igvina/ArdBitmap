@@ -22,7 +22,7 @@ By @igvina
 	
 ###Library (1.0.0):
 
-* Copy lib ( ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
+* Copy lib (ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
 * Add in .ino file:
 	* \#include "ArdBitmaplib.h"
 	* ArdBitmaplib ardbitmap (arduboy);
