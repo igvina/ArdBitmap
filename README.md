@@ -1,6 +1,8 @@
+#ArdBitmaplib: Compress and draw bitmaps on the Arduboy
+By @igvina
+##Usage:
 - Compressor (v1.0):
-
-	Syntax: java -jar compressor.jar image [-options]
+Syntax: java -jar compressor.jar image [-options]
 
 	-options:
          	-gs SKETCH_FOLDER       Generate sketch code
@@ -38,16 +40,16 @@
     	void drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize);
 
 		
-	#define ALIGN_H_LEFT    0b00000000
-	#define ALIGN_H_RIGHT   0b00000001
-	#define ALIGN_H_CENTER  0b00000010
-	#define ALIGN_V_TOP     0b00000000
-	#define ALIGN_V_BOTTOM  0b00000100
-	#define ALIGN_V_CENTER  0b00001000
-	#define ALIGN_CENTER    0b00001010
-	#define ALIGN_NONE      0b00000000
+	\#define ALIGN_H_LEFT    0b00000000
+	\#define ALIGN_H_RIGHT   0b00000001
+	\#define ALIGN_H_CENTER  0b00000010
+	\#define ALIGN_V_TOP     0b00000000
+	\#define ALIGN_V_BOTTOM  0b00000100
+	\#define ALIGN_V_CENTER  0b00001000
+	\#define ALIGN_CENTER    0b00001010
+	\#define ALIGN_NONE      0b00000000
 
-	#define MIRROR_NONE       0b00000000
-	#define MIRROR_HORIZONTAL 0b00000001
-	#define MIRROR_VERTICAL   0b00000010
-	#define MIRROR_HOR_VER    0b00000011
+	\#define MIRROR_NONE       0b00000000
+	\#define MIRROR_HORIZONTAL 0b00000001
+	\#define MIRROR_VERTICAL   0b00000010
+	\#define MIRROR_HOR_VER    0b00000011
