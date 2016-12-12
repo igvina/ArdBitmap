@@ -5,7 +5,7 @@ By @igvina
 * Syntax: java -jar compressor.jar image [-options]
 	* options:
 		* -gs SKETCH_FOLDER       Generate sketch code
-		* -fr VALUE               Change Frame rate (only animated gifs)
+		* -fr VALUE               Change frame rate (only animated gifs)
 		* -v                      View compressed image
 		* -anp PREFIX             Array name prefix
 		* -ver                    Show encoder version
