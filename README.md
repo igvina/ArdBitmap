@@ -16,7 +16,7 @@ By @igvina
         	"java -jar compressor.jar dance.png -v"
 
 	* Notes: 
-		* Supports JPG, PNG, GIF (also animated gifs)
+		* Supports PNG, GIF (also animated gifs) & JPG
 		* Max image size = 128 x 64 pixels (resized if bigger)
 		* Encoding ratio could be bigger than 1 (worse than original image) 
 	
