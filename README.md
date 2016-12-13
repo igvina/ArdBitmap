@@ -38,7 +38,7 @@ By @igvina
 * Copy lib (ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
 * Add in .ino file:
 	* \#include "ArdBitmaplib.h"
-	* ArdBitmaplib ardbitmap (arduboy);
+	* ArdBitmaplib ardbitmap (arduboy.getBuffer());
 * To draw call function: ardbitmap.drawCompressed (...) , ardbitmap.drawCompressedResized(...) , ardbitmap.drawBitmap (...) , drawBitmapResized(...)
 
 ####Methods:
