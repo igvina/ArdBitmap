@@ -14,13 +14,10 @@
    limitations under the License.
 */
 
-// ArdBitmaplib: version 1.0.0
+// ArdBitmaplib: version 1.0.1
 
 #ifndef _ARDBITMAPLIB_H_
 #define _ARDBITMAPLIB_H_
-
-//Uncomment ARDUBOY_2 if you want to use this library 
-//#define ARDUBOY_2
 
 //Comment SPEED_HACK if speed is not important (reduce ~100 bytes)
 #define SPEED_HACK
@@ -28,11 +25,7 @@
 //Uncomment RESIZE_HACK for fast drawResized with resize >= 1.0
 //#define RESIZE_HACK
 
-#ifdef ARDUBOY_2
-#include <Arduboy2.h>
-#else
-#include <Arduboy.h>
-#endif
+#include <Arduino.h>
 
 #define ALIGN_H_LEFT    0b00000000
 #define ALIGN_H_RIGHT   0b00000001
@@ -104,11 +97,8 @@ static const uint8_t REVERSE_256[256] = {
 class ArdBitmaplib
 {
   public:
-#ifdef ARDUBOY_2
-    ArdBitmaplib(Arduboy2 &arduboy);
-#else
-    ArdBitmaplib(Arduboy &arduboy);
-#endif
+
+    ArdBitmaplib(unsigned char *screenBuffer);
 
     void drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror);   
     void drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize);
@@ -117,14 +107,8 @@ class ArdBitmaplib
     void drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize);
   
   private:
-
-#ifdef ARDUBOY_2
-    Arduboy2 *arduboy;
-#else
-    Arduboy *arduboy;
-#endif
- // Slower
- //unsigned char *sBuffer;
+ 
+    unsigned char *sBuffer;
 };
 
 #endif

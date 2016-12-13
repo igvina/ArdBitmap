@@ -10,7 +10,7 @@
 // make an instance of arduboy used for many functions
 Arduboy arduboy;
 
-ArdBitmaplib ardbitmap (arduboy);
+ArdBitmaplib ardbitmap (arduboy.getBuffer());
 
 #ifdef SHOW_FPS
 

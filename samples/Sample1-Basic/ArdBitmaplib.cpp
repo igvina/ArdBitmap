@@ -14,19 +14,16 @@
    limitations under the License.
 */
 
-// ArdBitmaplib: version 1.0.0
+// ArdBitmaplib: version 1.0.1
 
 #include "ArdBitmaplib.h"
 
-#ifdef ARDUBOY_2
-ArdBitmaplib::ArdBitmaplib(Arduboy2 &a) {
-  arduboy = &a;
+#define WIDTH 128
+#define HEIGHT 64
+
+ArdBitmaplib::ArdBitmaplib(unsigned char *screenBuffer) {
+  sBuffer = screenBuffer;
 }
-#else
-ArdBitmaplib::ArdBitmaplib(Arduboy &a) {
-  arduboy = &a;
-}
-#endif
 
 
 ////////////////////////
@@ -72,9 +69,7 @@ void ArdBitmaplib::drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBit
   // No need to draw at all if we're offscreen
   if (sx + w < 0 || sx > WIDTH - 1 || sy + h < 0 || sy > HEIGHT - 1)
     return;
-    
-  unsigned char *sBuffer = arduboy->getBuffer();
-
+   
   col = (byte0 >> 7) & 0x01;
   scanMode = ((byte1 >> 6) & 0x01) > 0;
   scanZigZag = ((byte1 >> 7) & 0x01) > 0;
@@ -285,8 +280,6 @@ void ArdBitmaplib::drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *
   if (sx + wRes < 0 || sx > WIDTH - 1 || sy + hRes < 0 || sy > HEIGHT - 1)
     return;
 
-  unsigned char *sBuffer = arduboy->getBuffer();
-
   col = (byte0 >> 7) & 0x01;
   scanMode = ((byte1 >> 6) & 0x01) > 0;
   scanZigZag = ((byte1 >> 7) & 0x01) > 0;
@@ -474,10 +467,7 @@ void ArdBitmaplib::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8
 
   if (bitmap == NULL)
     return;
-
-  unsigned char *sBuffer = arduboy->getBuffer();
-
-
+ 
   // xOffset technically doesn't need to be 16 bit but the math operations
   // are measurably faster if it is
   uint16_t xOffset, ofs;
@@ -655,8 +645,6 @@ void ArdBitmaplib::drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitm
   // No need to draw at all if we're offscreen
   if (sx + wRes < 0 || sx > WIDTH - 1 || sy + hRes < 0 || sy > HEIGHT - 1)
     return;
-
-  unsigned char *sBuffer = arduboy->getBuffer();
 
   int yOffset = abs(sy) % 8;
   int sRow = sy / 8;

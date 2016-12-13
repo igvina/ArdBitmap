@@ -6,7 +6,7 @@
 // make an instance of arduboy used for many functions
 Arduboy2 arduboy;
 
-ArdBitmaplib ardbitmap (arduboy);
+ArdBitmaplib ardbitmap (arduboy.getBuffer());
 
 // This function runs once in your game.
 // use it for anything that needs to be set only once in your game.
