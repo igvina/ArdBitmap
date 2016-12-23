@@ -13,6 +13,12 @@ By @igvina
 * Supports PNG, GIF (also animated gifs) & JPG.
 * Autogenerate Sketchs from images or animated gifs (great for no-developers).
 
+##Video:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=vtDYwqJ68gU
+" target="_blank"><img src="http://img.youtube.com/vi/vtDYwqJ68gU/0.jpg" 
+alt="DEMO" width="240" height="180" border="10" /></a>
+
 ##Usage:
 ###Compressor (v1.0):
 * Syntax: java -jar compressor.jar image [-options]
