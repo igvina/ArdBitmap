@@ -1,4 +1,4 @@
-#ArdBitmaplib: Compress and draw bitmaps on the Arduboy
+#ArdBitmap: Compress and draw bitmaps on the Arduboy
 By @igvina
 ##Features:
 ###Bitmap library:
@@ -40,10 +40,10 @@ alt="DEMO" width="240" height="180" border="10" /></a>
 		* Encoding ratio could be bigger than 1 (worse than original image)
 
 ###Bitmap library (1.0.1):
-* Install the ArdBitmaplib library in the Arduino IDE
+* Install the ArdBitmap library in the Arduino IDE
 * Add in .ino file:
-	* \#include <ArdBitmaplib.h>
-	* ArdBitmaplib ardbitmap (arduboy.getBuffer());
+	* \#include <ArdBitmap.h>
+	* ArdBitmap ardbitmap (arduboy.getBuffer());
 * To draw call function: ardbitmap.drawCompressed(...) , ardbitmap.drawCompressedResized(...) , ardbitmap.drawBitmap(...) , ardbitmap.drawBitmapResized(...)
 
 ####Methods:

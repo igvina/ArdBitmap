@@ -1,12 +1,12 @@
 ######################################
-# Syntax Coloring Map For ArdBitmaplib
+# Syntax Coloring Map For ArdBitmap
 ######################################
 
 ######################################
 # Datatypes (KEYWORD1)
 ######################################
 
-ArdBitmaplib	KEYWORD1
+ArdBitmap	KEYWORD1
 
 ######################################
 # Methods and Functions (KEYWORD2)

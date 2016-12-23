@@ -14,10 +14,10 @@
    limitations under the License.
 */
 
-// ArdBitmaplib: version 1.0.1
+// ArdBitmap: version 1.0.1
 
-#ifndef _ARDBITMAPLIB_H_
-#define _ARDBITMAPLIB_H_
+#ifndef _ARDBITMAP_H_
+#define _ARDBITMAP_H_
 
 //Comment SPEED_HACK if speed is not important (reduce ~100 bytes)
 #define SPEED_HACK
@@ -94,11 +94,11 @@ static const uint8_t REVERSE_256[256] = {
     };
 */
     
-class ArdBitmaplib
+class ArdBitmap
 {
   public:
 
-    ArdBitmaplib(unsigned char *screenBuffer);
+    ArdBitmap(unsigned char *screenBuffer);
 
     void drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror);   
     void drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize);

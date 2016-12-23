@@ -14,14 +14,14 @@
    limitations under the License.
 */
 
-// ArdBitmaplib: version 1.0.1
+// ArdBitmap: version 1.0.1
 
-#include "ArdBitmaplib.h"
+#include "ArdBitmap.h"
 
 #define WIDTH 128
 #define HEIGHT 64
 
-ArdBitmaplib::ArdBitmaplib(unsigned char *screenBuffer) {
+ArdBitmap::ArdBitmap(unsigned char *screenBuffer) {
   sBuffer = screenBuffer;
 }
 
@@ -30,7 +30,7 @@ ArdBitmaplib::ArdBitmaplib(unsigned char *screenBuffer) {
 // COMPRESSED BITMAPS //
 ////////////////////////
 
-void ArdBitmaplib::drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror)
+void ArdBitmap::drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror)
 {
   //TODO: check why int16_t sizeCounter is a bit faster than uint16_t sizeCounter 
   int16_t sizeCounter;
@@ -228,7 +228,7 @@ void ArdBitmaplib::drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBit
 
 
 
-void ArdBitmaplib::drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize)
+void ArdBitmap::drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize)
 {
 
   //TODO: check if this can be done in a better way
@@ -444,7 +444,7 @@ void ArdBitmaplib::drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *
 //////////////////////////
 
 
-void ArdBitmaplib::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8_t w, uint8_t h, uint8_t color, uint8_t align, uint8_t mirror)
+void ArdBitmap::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8_t w, uint8_t h, uint8_t color, uint8_t align, uint8_t mirror)
 {
 
   // Move positions to match alignment
@@ -603,7 +603,7 @@ void ArdBitmaplib::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8
 }
 
 
-void ArdBitmaplib::drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize)
+void ArdBitmap::drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize)
 {
 
   //TODO: check if this can be done in a better way
