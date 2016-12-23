@@ -30,37 +30,36 @@ alt="DEMO" width="240" height="180" border="10" /></a>
 		* -ver                    Show encoder version
 
 	* examples:
-	
+
         	"java -jar compressor.jar dog.gif -gs DOG -fr 15"
         	"java -jar compressor.jar dance.png -v"
 
-	* Notes: 
+	* Notes:
 		* Supports PNG, GIF (also animated gifs) & JPG
 		* Max image size = 128 x 64 pixels (resized if bigger)
-		* Encoding ratio could be bigger than 1 (worse than original image) 
-	
-###Bitmap library (1.0.1):
+		* Encoding ratio could be bigger than 1 (worse than original image)
 
-* Copy lib (ArdBitmaplib.h and ArdBitmaplib.cpp) to your project folder
+###Bitmap library (1.0.1):
+* Install the ArdBitmaplib library in the Arduino IDE
 * Add in .ino file:
-	* \#include "ArdBitmaplib.h"
+	* \#include <ArdBitmaplib.h>
 	* ArdBitmaplib ardbitmap (arduboy.getBuffer());
-* To draw call function: ardbitmap.drawCompressed (...) , ardbitmap.drawCompressedResized(...) , ardbitmap.drawBitmap (...) , drawBitmapResized(...)
+* To draw call function: ardbitmap.drawCompressed(...) , ardbitmap.drawCompressedResized(...) , ardbitmap.drawBitmap(...) , ardbitmap.drawBitmapResized(...)
 
 ####Methods:
-	
+
 #####Compressed images:
-* void drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror);   
+* void drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror);
 * void drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize);
-	
+
 #####Uncompressed images:
 * void drawBitmap(int16_t sx, int16_t sy, const uint8_t *bitmap,uint8_t w, uint8_t h, uint8_t color, uint8_t align, uint8_t mirror);
 * void drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize);
 
-####Defines:		
+####Defines:
 * #define ALIGN_H_LEFT
 * #define ALIGN_H_RIGHT
-* #define ALIGN_H_CENTER  
+* #define ALIGN_H_CENTER
 * #define ALIGN_V_TOP
 * #define ALIGN_V_BOTTOM
 * #define ALIGN_V_CENTER

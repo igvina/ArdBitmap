@@ -1,6 +1,6 @@
 
 #include <Arduboy2.h>
-#include "ArdBitmaplib.h"
+#include <ArdBitmaplib.h>
 #include "bitmaps.h"
 
 // make an instance of arduboy used for many functions

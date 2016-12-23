@@ -1,6 +1,6 @@
 
 #include <Arduboy.h>
-#include "ArdBitmaplib.h"
+#include <ArdBitmaplib.h>
 #include "bitmaps.h"
 
 #define ARRAY_LEN(a) (sizeof(a) / sizeof((a)[0]))
