@@ -1,6 +1,5 @@
 
 #include <Arduboy.h>
-#include <ArdBitmap.h>
 #include "bitmaps.h"
 
 #define ARRAY_LEN(a) (sizeof(a) / sizeof((a)[0]))
@@ -9,7 +8,10 @@
 // make an instance of arduboy used for many functions
 Arduboy arduboy;
 
-ArdBitmap ardbitmap (arduboy.getBuffer());
+// make an ArdBitmap instance that will use the given the screen buffer and dimensions
+#define ARDBITMAP_SBUF arduboy.getBuffer()
+#include <ArdBitmap.h>
+ArdBitmap<WIDTH, HEIGHT> ardbitmap;
 
 // This function runs once in your game.
 // use it for anything that needs to be set only once in your game.
