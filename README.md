@@ -11,7 +11,7 @@ By @igvina
 * Compatible with PC/MAC/Linux (made with Java).
 * Good compression (better than Cabi).
 * Supports PNG, GIF (also animated gifs) & JPG.
-* Autogenerate Sketchs from images or animated gifs (great for no-developers).
+* Autogenerate sketches from images or animated gifs (great for no-developers).
 
 ##Video:
 
@@ -20,8 +20,8 @@ By @igvina
 alt="DEMO" width="240" height="180" border="10" /></a>
 
 ##Usage:
-###Compressor (v1.0):
-* Syntax: java -jar compressor.jar image [-options]
+###Compressor (v2.0):
+* Syntax: java -jar compressor2.0.jar image [-options]
 	* options:
 		* -gs SKETCH_FOLDER       Generate sketch code
 		* -fr VALUE               Change frame rate (only animated gifs)
@@ -31,8 +31,8 @@ alt="DEMO" width="240" height="180" border="10" /></a>
 
 	* examples:
 
-        	"java -jar compressor.jar dog.gif -gs DOG -fr 15"
-        	"java -jar compressor.jar dance.png -v"
+        	"java -jar compressor2.0.jar dog.gif -gs DOG -fr 15"
+        	"java -jar compressor2.0.jar dance.png -v"
 
 	* Notes:
 		* Supports PNG, GIF (also animated gifs) & JPG
