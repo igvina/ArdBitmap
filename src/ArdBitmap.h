@@ -94,7 +94,7 @@ static const uint8_t REVERSE_256[256] = {
     };
 */
 
-template<size_t SB_WIDTH, size_t SB_HEIGHT> class ArdBitmap
+template<int16_t SB_WIDTH, int16_t SB_HEIGHT> class ArdBitmap
 {
   public:
 
@@ -109,7 +109,7 @@ template<size_t SB_WIDTH, size_t SB_HEIGHT> class ArdBitmap
 // COMPRESSED BITMAPS //
 ////////////////////////
 
-template<size_t SB_WIDTH, size_t SB_HEIGHT>
+template<int16_t SB_WIDTH, int16_t SB_HEIGHT>
 void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror)
 {
   //TODO: check why int16_t sizeCounter is a bit faster than uint16_t sizeCounter
@@ -308,7 +308,7 @@ void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawCompressed(int16_t sx, int16_t sy, cons
 
 
 
-template<size_t SB_WIDTH, size_t SB_HEIGHT>
+template<int16_t SB_WIDTH, int16_t SB_HEIGHT>
 void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize)
 {
 
@@ -525,7 +525,7 @@ void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawCompressedResized(int16_t sx, int16_t s
 //////////////////////////
 
 
-template<size_t SB_WIDTH, size_t SB_HEIGHT>
+template<int16_t SB_WIDTH, int16_t SB_HEIGHT>
 void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawBitmap(int16_t x, int16_t y, const uint8_t *bitmap, uint8_t w, uint8_t h, uint8_t color, uint8_t align, uint8_t mirror)
 {
 
@@ -685,7 +685,7 @@ void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawBitmap(int16_t x, int16_t y, const uint
 }
 
 
-template<size_t SB_WIDTH, size_t SB_HEIGHT>
+template<int16_t SB_WIDTH, int16_t SB_HEIGHT>
 void ArdBitmap<SB_WIDTH, SB_HEIGHT>::drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize)
 {
 
