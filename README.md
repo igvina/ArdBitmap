@@ -40,7 +40,16 @@ alt="DEMO" width="240" height="180" border="10" /></a>
 		* Encoding ratio could be bigger than 1 (worse than original image)
 
 ###Bitmap library (2.0.0):
-* Install the ArdBitmap library in the Arduino IDE
+* Install the ArdBitmap library in the Arduino IDE. The library can be installed using the Arduino IDE library manager:
+
+    - In the Arduino IDE select from the menus: `Sketch > Include Library > Manage Libraries...`
+    - In the Library Manager *Filter your search...* field enter *ardbitmap*
+    - Click somewhere within the ArdBitmap entry.
+    - Click on the *Install* button.
+
+    For more library installation information see:
+
+    [Installing Additional Arduino Libraries - Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
 
 * In .ino file, add ArdBitmap library instance after main library instance:
 
@@ -113,5 +122,4 @@ Arduboy2 arduboy;
 // were defined by the Arduboy2 (or Arduboy) library
 ArdBitmap<WIDTH, HEIGHT> ardbitmap;
 ```
-
 
