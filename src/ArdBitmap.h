@@ -14,7 +14,7 @@
    limitations under the License.
 */
 
-// ArdBitmap: version 2.0.1
+// ArdBitmap: version 2.0.2
 
 #ifndef ARDBITMAP_H
 #define ARDBITMAP_H

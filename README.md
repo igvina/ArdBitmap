@@ -94,11 +94,11 @@ ArdBitmap<WIDTH, HEIGHT> ardbitmap;
 ####Library instance details:
 * The library is implemented as a class template named ArdBitmap. It requires 3 pieces of information in order to create an instance of the ArdBitmap class:
 
-    - An _expression_ that will evaluate to a pointer to the first location in the screen buffer array, such that it can be used to index a screen buffer location like `expression[i] = 5`. The expression is provided by defining the macro `ARDBITMAP_SBUF`. It must be defined **before** including _Ardbitmap.h_
+    - An _expression_ that will evaluate to a pointer to the first location in the screen buffer array, such that it can be used to index a screen buffer location like `expression[i] = 5`. The expression is provided by defining the macro `ARDBITMAP_SBUF`. It must be defined **before** including _ArdBitmap.h_
     - The width of the screen, in pixels. This is provided as the first of the two template arguments.
     - the height of the screen in pixels. This is provided as the second of the two template arguments.
 
-* It's probably best to group the `#define ARDBITMAP_SBUF`, the `#include Ardbitmap.h` and the instantiation of an ArdBitmap class object as one block of code. For an Arduboy sketch this might be:
+* It's probably best to group the `#define ARDBITMAP_SBUF`, the `#include ArdBitmap.h` and the instantiation of an ArdBitmap class object as one block of code. For an Arduboy sketch this might be:
 
 ```cpp
 // make an instance of the Arduboy2 class used for many functions
