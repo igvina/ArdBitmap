@@ -1,26 +1,26 @@
-#ArdBitmap: Compress and draw bitmaps on the Arduboy
+# ArdBitmap: Compress and draw bitmaps on the Arduboy
 By @igvina
-##Features:
-###Bitmap library:
+## Features:
+### Bitmap library:
 * Works with compressed & uncompressed bitmaps.
 * Real-time image resize (downscale).
 * Horizontal/Vertical mirroring (fast).
 * Bitmap alignment.
 
-###Bitmap compressor:
+### Bitmap compressor:
 * Compatible with PC/MAC/Linux (made with Java).
 * Good compression (better than Cabi).
 * Supports PNG, GIF (also animated gifs) & JPG.
 * Autogenerate sketches from images or animated gifs (great for no-developers).
 
-##Video:
+## Video:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=vtDYwqJ68gU
 " target="_blank"><img src="http://img.youtube.com/vi/vtDYwqJ68gU/0.jpg" 
 alt="DEMO" width="240" height="180" border="10" /></a>
 
-##Usage:
-###Compressor (v2.0):
+## Usage:
+### Compressor (v2.0):
 * Syntax: java -jar compressor2.0.jar image [-options]
 	* options:
 		* -gs SKETCH_FOLDER       Generate sketch code
@@ -39,7 +39,7 @@ alt="DEMO" width="240" height="180" border="10" /></a>
 		* Max image size = 128 x 64 pixels (resized if bigger)
 		* Encoding ratio could be bigger than 1 (worse than original image)
 
-###Bitmap library (v2.0.x):
+### Bitmap library (v2.0.x):
 * Install the ArdBitmap library in the Arduino IDE. The library can be installed using the Arduino IDE library manager:
 
     - In the Arduino IDE select from the menus: `Sketch > Include Library > Manage Libraries...`
@@ -67,17 +67,17 @@ ArdBitmap<WIDTH, HEIGHT> ardbitmap;
 
 * To draw, call function: ardbitmap.drawCompressed(...) , ardbitmap.drawCompressedResized(...) , ardbitmap.drawBitmap(...) , ardbitmap.drawBitmapResized(...)
 
-####Methods:
+#### Methods:
 
-#####Compressed images:
+##### Compressed images:
 * `void drawCompressed(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color, uint8_t align, uint8_t mirror);`
 * `void drawCompressedResized(int16_t sx, int16_t sy, const uint8_t *compBitmap, uint8_t color,uint8_t align, uint8_t mirror, float resize);`
 
-#####Uncompressed images:
+##### Uncompressed images:
 * `void drawBitmap(int16_t sx, int16_t sy, const uint8_t *bitmap,uint8_t w, uint8_t h, uint8_t color, uint8_t align, uint8_t mirror);`
 * `void drawBitmapResized(int16_t sx, int16_t sy, const uint8_t *bitmap, uint8_t w,uint8_t h, uint8_t color,uint8_t align, uint8_t mirror, float resize);`
 
-####Defines:
+#### Defines:
 * `#define ALIGN_H_LEFT`
 * `#define ALIGN_H_RIGHT`
 * `#define ALIGN_H_CENTER`
@@ -91,7 +91,7 @@ ArdBitmap<WIDTH, HEIGHT> ardbitmap;
 * `#define MIRROR_VERTICAL`
 * `#define MIRROR_HOR_VER`
 
-####Library instance details:
+#### Library instance details:
 * The library is implemented as a class template named ArdBitmap. It requires 3 pieces of information in order to create an instance of the ArdBitmap class:
 
     - An _expression_ that will evaluate to a pointer to the first location in the screen buffer array, such that it can be used to index a screen buffer location like `expression[i] = 5`. The expression is provided by defining the macro `ARDBITMAP_SBUF`. It must be defined **before** including _ArdBitmap.h_
